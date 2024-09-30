@@ -1,0 +1,352 @@
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Creepster', cursive;
+    background-color: #1a1a1a;
+    color: #ff6600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #000;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a, nav ul li button {
+    color: #ff6600;
+    text-decoration: none;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+    color: #ff0000;
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #ff0000;
+    margin-bottom: 1rem;
+}
+
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border: 2px solid #ff6600;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 10px #ff0000;
+    position: relative;
+    animation: popupAppear 0.3s ease-out;
+}
+
+@keyframes popupAppear {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Botones */
+button {
+    background-color: #ff6600;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Creepster', cursive;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Carrito de compras */
+#carritoProductos, #carritoOfertas {
+    margin-top: 20px;
+    border-top: 1px solid #ff6600;
+    padding-top: 10px;
+}
+
+/* Mesas para reservas */
+.mesa {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    font-size: 1rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><circle cx="40" cy="40" r="35" fill="%23ff6600" /><text x="40" y="45" font-family="Arial" font-size="14" fill="%23000" text-anchor="middle" alignment-baseline="middle">Mesa</text></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mesa:hover {
+    transform: scale(1.1);
+}
+
+/* Formulario de reserva */
+#formReserva input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Efectos de Halloween */
+@keyframes flicker {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.3; }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="50" y="50" font-family="Arial" font-size="10" fill="%23ff0000" text-anchor="middle" alignment-baseline="middle">👻</text></svg>');
+    opacity: 0.1;
+    z-index: -1;
+    animation: flicker 5s infinite;
+    pointer-events: none;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #ff6600;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos para los recuadros de información */
+.info-recuadro {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff6600;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px #ff0000;
+    transition: transform 0.3s ease;
+}
+
+.info-recuadro:hover {
+    transform: translateY(-5px);
+}
+
+.info-recuadro h2 {
+    color: #ff6600;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.info-recuadro p {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+    display: inline-block;
+    background-color: #cf420a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+
+
+.whatsapp-button:active {
+    transform: scale(0.95);
+}
+
+/* Estilos para la X de cierre en los popups */
+.cerrar {
+    color: #ff6600;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s, transform 0.1s;
+}
+
+.cerrar:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+}
+
+/* Estilos para el botón de comprar en los popups */
+.comprar-button {
+    background-color: #ff6600;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Creepster', cursive;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.comprar-button:hover {
+    background-color: #ff0000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.comprar-button:active {
+    transform: scale(0.95);
+}
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .popup-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .mesa {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+
+    .info-recuadro h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-recuadro p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button, .whatsapp-button, .comprar-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .mesa {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .info-recuadro {
+        padding: 15px;
+    }
+
+    .info-recuadro h2 {
+        font-size: 1.3rem;
+    }
+
+    .info-recuadro p {
+        font-size: 0.9rem;
+    }
+
+    .popup-content {
+        padding: 15px;
+    }
+
+    .cerrar {
+        font-size: 24px;
+        top: 5px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Halloween</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#acerca">Acerca de nosotros</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+                <li><button id="btnProductos">Productos</button></li>
+                <li><button id="btnOfertas">Ofertas</button></li>
+                <li><button id="btnReservas">Reservas</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bienvenidos a la Pastelería Halloween</h1>
+        
+        <section id="acerca" class="info-recuadro">
+            <h2>Acerca de Nuestra Pastelería</h2>
+            <p>Somos una pastelería especializada en crear dulces terroríficamente deliciosos. Nuestros pasteles y golosinas son perfectos para celebrar Halloween todo el año.</p>
+        </section>
+
+        <section id="contacto" class="info-recuadro">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta o pedido especial? ¡Escríbenos!</p>
+            <a href="https://wa.me/1234567890" class="whatsapp-button">Contactar por WhatsApp</a>
+        </section>
+    </main>
+
+    <!-- Popups -->
+    <div id="productosPopup" class="popup">
+        <div class="popup-content">
+            <span class="cerrar">&times;</span>
+            <h2>Productos</h2>
+            <div id="listaProductos"></div>
+            <div id="carritoProductos"></div>
+            <button id="comprarProductos" class="comprar-button">Comprar</button>
+        </div>
+    </div>
+
+    <div id="ofertasPopup" class="popup">
+        <div class="popup-content">
+            <span class="cerrar">&times;</span>
+            <h2>Ofertas</h2>
+            <div id="listaOfertas"></div>
+            <div id="carritoOfertas"></div>
+            <button id="comprarOfertas" class="comprar-button">Comprar</button>
+        </div>
+    </div>
+
+    <div id="reservasPopup" class="popup">
+        <div class="popup-content">
+            <span class="cerrar">&times;</span>
+            <h2>Reservas</h2>
+            <div id="listaMesas">
+                <button class="mesa" data-mesa="1">Mesa 1</button>
+                <button class="mesa" data-mesa="2">Mesa 2</button>
+                <button class="mesa" data-mesa="3">Mesa 3</button>
+                <button class="mesa" data-mesa="4">Mesa 4</button>
+                <button class="mesa" data-mesa="5">Mesa 5</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="reservaForm" class="popup">
+        <div class="popup-content">
+            <span class="cerrar">&times;</span>
+            <h2>Hacer Reserva</h2>
+            <form id="formReserva">
+                <input type="date" id="fechaReserva" required>
+                <input type="time" id="horaReserva" required>
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Pastelería Halloween. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
